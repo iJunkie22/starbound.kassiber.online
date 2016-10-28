@@ -1,0 +1,278 @@
+@font-face {
+  font-family: "Trench";
+  src: url("../fonts/trench100free.ttf");
+}
+
+@keyframes hardblink {
+  0%, 49% {opacity: 1.0;}
+  50%, 100% {opacity: 0.0;}
+}
+
+@keyframes softblink {
+  0%, 100% {opacity: 1.0;}
+  50% {opacity: 0.0;}
+}
+
+h1, h2, h3, h4, h5, a, span, body, header, footer {
+  font-family: sans-serif;
+  font-weight: 300;
+  /*-webkit-font-smoothing: antialiased;*/
+
+}
+#menu-button {
+  position: fixed;
+  padding: 10px;
+  display: none;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+}
+html {
+  background: #1E1E21 radial-gradient(ellipse farthest-side at left top , #00549E 0px, transparent 100%)
+  no-repeat scroll center top / 100% 500px;
+}
+body {
+  margin: 0;
+  background-color: rgba(0,0,0,0.2);
+}
+header {
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  max-width: 100%;
+}
+header>div {
+  max-width: 100%;
+  padding: 0 40px;
+}
+#banner-img {
+  /*background-image: url("../images/iJunkie22Logo.png");*/
+  background-size: auto auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  /*height: 106px;*/
+  text-align: center;
+}
+/*header img {
+  max-width: 100%;
+}*/
+#banner-img a {
+  text-decoration: none;
+  cursor: pointer;
+}
+#banner-img span {
+  /*display: none;*/
+  font-family: "Trench";
+  color: rgba(255,255,255,0.6);
+  font-size: 36px;
+  font-variant: small-caps;
+  letter-spacing: 5px;
+}
+#banner-img span:nth-child(1){
+  color: #F9EC88;
+}
+.blink {
+  opacity: 0.0;
+  animation-name: softblink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+nav {
+  margin-top: 5px;
+  padding-top: 10px;
+  border-top: 1px solid #5d3268;
+  text-align: center;
+}
+nav>a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+nav>a:not(:hover) {
+  color: rgba(255,255,255,0.6);
+  transition: all .2s;
+}
+nav>a:hover {
+  color: #F9EC88;
+  transition: all .2s;
+}
+section {
+  width: calc(100% - 200px);
+  margin: 20px 60px 20px 20px;
+  padding: 10px;
+  background: rgba(0,0,0,0.1) linear-gradient(to right, rgba(0,0,0,0.5) 0px, rgba(0,0,0,0.05) 50%)
+              no-repeat scroll ;
+  overflow: hidden;
+  color: #fff;
+}
+/*section#main-content {
+  background-color: white;
+  padding: 0 10px;
+  box-shadow: 0 0 12px 4px #477e91;
+  border: 2px solid #6cceef;
+	border-left-width: 0;
+    border-right-width: 0;
+}
+section section {
+  margin: 0 auto;
+  width: 984px;
+}
+
+section#main-content>h1:first-of-type {
+  margin-top: 0;
+  padding-top: 10px;
+}
+p {
+  margin-left: 30px;
+}
+section#main-content p {
+  max-width: 750px;
+  line-height: 1.3em;
+}*/
+footer {
+  margin: 40px 10px 10px;
+  bottom: 0;
+  vertical-align: bottom;
+  text-align: inherit;
+  /*background-color: #302f2f;*/
+  color: #e7e7e7;
+  font-size: 0.7em;
+}
+footer span {
+
+}
+span.clause {
+  font-size: 0.7em;
+  display: block;
+}
+#twitter-widget-0 {
+  max-width: 400px;
+}
+
+
+/*
+                 _     _ _
+ _ __ ___   ___ | |__ (_) | ___
+| '_ ` _ \ / _ \| '_ \| | |/ _ \
+| | | | | | (_) | |_) | | |  __/
+|_| |_| |_|\___/|_.__/|_|_|\___|
+
+*/
+
+@media only screen and (max-width: 650px) {
+  header {
+    padding: 1px;
+  }
+
+  #banner-img {
+    padding: 0;
+    background-size: auto 50px;
+    height: 60px;
+    margin-right: 60px;
+    position: fixed;
+    width: 100%;
+  }
+
+  #banner-img > span {
+    display: block;
+    font-size: 40pt;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #5d3268;
+
+  }
+
+  /*header>div>img {
+    height: 40px;
+    display: inline-block;
+  }*/
+  #menu-button {
+    display: inline-block;
+    color: #a236ae;
+    background-color: transparent;
+    font-size: 2em;
+    border-color: transparent;
+  }
+
+  header > nav {
+    right: 0;
+    height: 100%;
+    max-height: calc(100% - 64px);
+    background-color: rgba(0, 0, 0, 0.65);
+    margin-top: 66px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    text-align: right;
+    width: 100%; /* This is automatic for -webkit-flex*/
+    border-top: none;
+    overflow-y: hidden;
+  }
+  header > nav.expanded {
+    transition-duration: 1s;
+  }
+  header > nav.expanded>a{
+    line-height: 1em;
+    transition-duration: 2s;
+  }
+  header > nav:not(.expanded)>a{
+    padding: 0 !important;
+    margin: 0px auto !important;
+    line-height: 0;
+    transition-duration: 2s;
+  }
+
+  header > nav:not(nav.expanded) > *{
+    padding: 0;
+    height: 0;
+    transition-duration: 2s;
+  }
+
+  header > nav > a {
+    font-size: 1.2em;
+    display: block;
+    background-color: #141414;
+    margin: 1px 1px;
+  }
+
+  header > nav > a.current-link {
+    color: #a236ae;
+    font-weight: 400;
+    transition-duration: unset;
+  }
+  section{
+    width: auto;
+  }
+  section section {
+    margin: 0 auto;
+    width: auto;
+  }
+
+}
+code {
+  padding: 1px 3px;
+  background-color: #a3a3a3;
+  border-radius: 2px;
+}
+code, code>span {
+  font-family: monospace;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+aside {
+  float: right;
+  height: 100%;
+}
+
+section a {
+  color: #346cb0;
+  text-decoration: none;
+}
+div.seperator {
+  display: inline;
+}
+div.seperator::before {
+  color: #346cb0;
+  content: "|";
+}
