@@ -214,6 +214,9 @@ span.clause {
     border-top: none;
     overflow-y: hidden;
   }
+  header > nav:not(.expanded) {
+    padding-bottom: 0px;
+  }
   header > nav.expanded {
     padding-bottom: 40px;
   }
