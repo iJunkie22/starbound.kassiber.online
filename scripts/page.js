@@ -28,7 +28,7 @@ menuBtn.addEventListener("click", function (evt) {
 }, false);
 
 var nav_as = document.querySelectorAll("header > nav > a");
-for (var i=0; i<nav_as.children.length; i++) {
-  var x = nav_as.children[i];
+for (var i=0; i<nav_as.length; i++) {
+  var x = nav_as[i];
   x.addEventListener("touchstart", function (evt){}, false);
 }
