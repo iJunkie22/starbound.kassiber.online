@@ -236,11 +236,11 @@ span.clause {
     transition: line-height 1s, margin 1s, padding 1s, transform 1s, color 0.5s 0.25s;
   }
 
-  header > nav:not(nav.expanded) > *{
+  /*header > nav:not(nav.expanded) > *{
     padding: 0;
     height: 0;
     transition-duration: 2s;
-  }
+  }*/
 
   header > nav > a {
     font-size: 1.2em;
