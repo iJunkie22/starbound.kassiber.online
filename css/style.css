@@ -203,23 +203,28 @@ span.clause {
     margin-left: 0;
     margin-right: 0;
     padding-top: 0;
-    text-align: right;
+    text-align: center;
     width: 100%; /* This is automatic for -webkit-flex*/
     border-top: none;
     overflow-y: hidden;
   }
   header > nav.expanded {
-    transition-duration: 1s;
+    transition-duration: 2s;
   }
   header > nav.expanded>a{
     line-height: 1em;
-    transition-duration: 2s;
+    margin: 1px 1px;
+    padding: 10px 0px;
+    transform: scaleY(1.0);
+    transition: line-height 2s, margin 2s, padding 2s, transform 2s;
   }
   header > nav:not(.expanded)>a{
-    padding: 0 !important;
-    margin: 0px auto !important;
-    line-height: 0;
-    transition-duration: 2s;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    line-height: 0em;
+    color: transparent !important;
+    transform: scaleY(0.0);
+    transition: line-height 2s, margin 2s, padding 2s, transform 2s, color 1s 0.5s;
   }
 
   header > nav:not(nav.expanded) > *{
@@ -238,7 +243,6 @@ span.clause {
   header > nav > a.current-link {
     color: #a236ae;
     font-weight: 400;
-    transition-duration: unset;
   }
   section{
     width: auto;

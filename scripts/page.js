@@ -26,3 +26,9 @@ menuBtn.addEventListener("click", function (evt) {
     toggle_menu();
     return false;
 }, false);
+
+var nav_as = document.querySelectorAll("header > nav > a");
+for (var i=0; i<nav_as.children.length; i++) {
+  var x = nav_as.children[i];
+  x.addEventListener("touchstart", function (evt){}, false);
+}
