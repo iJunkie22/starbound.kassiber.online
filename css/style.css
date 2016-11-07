@@ -164,7 +164,7 @@ span.clause {
     margin-top: 100px;
   }
   header {
-    padding: 1px;
+    padding: 0;
     margin: 0;
     position: fixed;
     top: 0;
