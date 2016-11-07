@@ -215,7 +215,7 @@ span.clause {
     overflow-y: hidden;
   }
   header > nav.expanded {
-    transition-duration: 2s;
+    padding-bottom: 40px;
   }
   header > nav.expanded>a{
     line-height: 1em;
