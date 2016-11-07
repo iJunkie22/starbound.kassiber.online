@@ -162,14 +162,16 @@ span.clause {
 @media only screen and (max-width: 650px) {
   header {
     padding: 1px;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
   #banner-img {
     padding: 0;
     background-size: auto 50px;
-    height: 60px;
     margin-right: 60px;
-    position: fixed;
+    position: relative;
     width: 100%;
   }
 
@@ -199,7 +201,7 @@ span.clause {
     height: 100%;
     max-height: calc(100% - 64px);
     background-color: rgba(0, 0, 0, 0.65);
-    margin-top: 98px;
+    margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     padding-top: 0;
